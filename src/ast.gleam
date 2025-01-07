@@ -7,10 +7,12 @@ import tokens.{type Token}
 // ------------------------------------------------------------------------------------------------
 
 pub type Node {
-  NodeStmt(Statement)
-  NodeExpr(Expression)
-  NodeProg(Program)
+  ExprNode(Expression)
+  StmtNode(Statement)
+  ProgramNode(Program) 
 }
+
+// ------------------------------------------------------------------------------------------------
 
 pub type Statement {
   StmtBlock(BlockStatement)
@@ -19,6 +21,8 @@ pub type Statement {
   StmtReturn(ReturnStatement)
   StmtPlaceholder
 }
+
+// ------------------------------------------------------------------------------------------------
 
 pub type Expression {
   ExprBool(Boolean)
